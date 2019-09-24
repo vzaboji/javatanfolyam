@@ -26,5 +26,13 @@ public class OperatorExample {
         }
         System.out.println("");
         char[] szovegTomb = felhasznaloNev.toCharArray();
+        for (int i = 0; i < szovegTomb.length;i++) {
+            char c=szovegTomb[i];
+            if (i%2!=0) {
+                c=Character.toUpperCase(c);
+            }
+            System.out.println(c);
+        }
+        System.out.println("");
     }
 }
