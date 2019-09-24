@@ -34,5 +34,14 @@ public class OperatorExample {
             System.out.println(c);
         }
         System.out.println("");
+        System.out.println("Kerek egy ujabb szamot");
+        int bSzam = scannerPeldany.nextInt();
+        System.out.println("kivonas: "+(vegrehajtasokSzama-bSzam));
+        System.out.println("osszeadas: "+(vegrehajtasokSzama+bSzam));
+        System.out.println("szorzas: "+(vegrehajtasokSzama*bSzam));
+        if (bSzam != 0) {
+            System.out.println("osszeadas: " + ((double)vegrehajtasokSzama / bSzam));
+        }
+        
     }
 }
