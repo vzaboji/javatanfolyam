@@ -11,6 +11,7 @@ public class OperatorExample {
         System.out.println("Üdv "+felhasznaloNev);
 
         System.out.println("Kerek egy szamot is");
+        //sorting by odd numbers to capitalization
         int vegrehajtasokSzama = scannerPeldany.nextInt();
         String nagybetusSzoveg=felhasznaloNev.toUpperCase();
         felhasznaloNev=felhasznaloNev.toLowerCase();
@@ -21,6 +22,7 @@ public class OperatorExample {
                 System.out.println(felhasznaloNev);
             }
         }
+        //splitting String to chars
         for (int i = felhasznaloNev.length()-1; i >=0;i--) {
             System.out.println(felhasznaloNev.charAt(i));
         }
@@ -40,8 +42,8 @@ public class OperatorExample {
         System.out.println("osszeadas: "+(vegrehajtasokSzama+bSzam));
         System.out.println("szorzas: "+(vegrehajtasokSzama*bSzam));
         if (bSzam != 0) {
-            System.out.println("osszeadas: " + ((double)vegrehajtasokSzama / bSzam));
+            System.out.println("elosztas: " + ((double)vegrehajtasokSzama / bSzam));
         }
-        
+
     }
 }
