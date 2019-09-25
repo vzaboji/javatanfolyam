@@ -1,6 +1,5 @@
-package main;
+package firstweek;
 
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.util.Scanner;
 
 public class SwitchCycleExample {
@@ -51,18 +50,5 @@ public class SwitchCycleExample {
             //System.out.println(translateText.charAt(translateText.length()-i-1));
         }
         System.out.println(translatedText);
-
-        int beginning = 0;
-        int end = translateText.length()-1;
-        char firstletter = translateText.charAt(beginning);
-        char lastletter = translateText.charAt(end);
-        int middle = translateText.length()/2;
-        while(firstletter == lastletter || beginning != middle || end != middle){
-            beginning++;
-            end--;
-            if (firstletter != lastletter){
-                System.out.println("It is not the same word!");
-            }
-        }
     }
 }

@@ -1,4 +1,4 @@
-package main;
+package firstweek;
 
 public class HelloWorld {
 
