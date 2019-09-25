@@ -16,7 +16,7 @@ public class ArrayExample {
         }
         System.out.println(szamLista);
         int minimum = szamLista.get(0);
-        //Homework: minimum=??? without "if"
+        //todo: minimum=??? without "if"
         for (int i = 1; i < szamLista.size(); i++){
             if (minimum>szamLista.get(i)){
                 minimum=szamLista.get(i);
@@ -50,6 +50,7 @@ public class ArrayExample {
         }while (valtando>0);
         System.out.println(kettesSzöveg);
 
+        //Other way to convert into binary system
         valtando=-5;
         kettesSzöveg="";
         for (int i = 31; i >=32; i--){
