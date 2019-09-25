@@ -52,11 +52,17 @@ public class SwitchCycleExample {
         }
         System.out.println(translatedText);
 
-        int eleje=0;
-        int vege=translateText.length()-1;
-        int lepesSzam=translateText.length()/2;
-        while(){
-
+        int beginning = 0;
+        int end = translateText.length()-1;
+        char firstletter = translateText.charAt(beginning);
+        char lastletter = translateText.charAt(end);
+        int middle = translateText.length()/2;
+        while(firstletter == lastletter || beginning != middle || end != middle){
+            beginning++;
+            end--;
+            if (firstletter != lastletter){
+                System.out.println("It is not the same word!");
+            }
         }
     }
 }
