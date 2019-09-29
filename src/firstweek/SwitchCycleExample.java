@@ -40,7 +40,7 @@ public class SwitchCycleExample {
             case "september":
             case "oktober":
             case "november":
-                System.out.println("ösz");
+                System.out.println("ösz van");
                 break;
         }
         String translateText ="alma";
