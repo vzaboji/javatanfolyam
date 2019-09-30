@@ -1,5 +1,4 @@
 package secondweek;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,7 +33,7 @@ public class MethodExample {
     }
 
     private static int[] ujTombLetrehoz(int hossz, int alsoKorlat, int felsoKorlat) {
-        int[] eredmenyTomb = new[Math.abs(hossz)];
+        int[] eredmenyTomb = new int[Math.abs(hossz)];
         Random veletlenGenerator=new Random();
         int nagyobb=ketSzamKozulANagyobb(alsoKorlat,felsoKorlat);
 
