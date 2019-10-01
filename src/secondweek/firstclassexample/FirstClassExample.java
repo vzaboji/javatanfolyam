@@ -1,5 +1,7 @@
 package secondweek.firstclassexample;
 
+import secondweek.firstclassexample.database.FileController;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -25,7 +27,7 @@ public class FirstClassExample {
         kutyaPeldany2.szulEv=2015;
         kutyaPeldany2.alfaj="Angol";
         System.out.println(kutyaPeldany2.fajtaTeljes());
-        ArrayList<String[]> kutyaAdatokLista=Fajl.fajlOlvas("kutyak.txt");
+        ArrayList<String[]> kutyaAdatokLista= FileController.fajlOlvas("kutyak.txt");
 
 
 
