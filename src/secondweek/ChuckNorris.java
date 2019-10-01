@@ -13,6 +13,7 @@ public class ChuckNorris {
     static Random veletlenGenerator=new Random();
     static final String[] JELEK = {".","#"};
 
+    //todo: @Martin PDF zur Aufgabe schicken
     public static void main(String[] args) {
         int[] osveny = osvenytTeremt();
         String osvenyKepe = osvenyKepe(osveny);
@@ -47,7 +48,7 @@ public class ChuckNorris {
             pocsolyaSzamlalo=(pocsolyaSzamlalo+osveny[index])*osveny[index++];
 //            index++;
         }
-        return
+        return pocsolyaSzamlalo <= MAX_UGRAS;
 
     }
 
