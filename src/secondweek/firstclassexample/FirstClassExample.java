@@ -4,6 +4,7 @@ import secondweek.firstclassexample.database.FileController;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class FirstClassExample {
 
@@ -27,9 +28,71 @@ public class FirstClassExample {
         kutyaPeldany2.szulEv=2015;
         kutyaPeldany2.alfaj="Angol";
         System.out.println(kutyaPeldany2.fajtaTeljes());
-        ArrayList<String[]> kutyaAdatokLista= FileController.fajlOlvas("kutyak.txt");
+        ArrayList<Kutya> kutyaLista = kutyaGyar("kutyak.txt");
+        for (Kutya kutya : kutyaLista){
+            System.out.println(kutya.nev);
+        }
+        Kutya legfiatalabbKutya = legfiatalabbKutyaKivalaszt(kutyaLista);
+        System.out.println("mev: "+legfiatalabbKutya.nev+" kor:"+legfiatalabbKutya.eletkor());
 
 
 
+//        ArrayList<String[]> kutyaAdatokLista= FileController.fajlOlvas("kutyak.txt");
+//        System.out.println("Lista meret: "+kutyaAdatokLista.size());
+    }
+
+    private static Kutya legfiatalabbKutyaKivalaszt(ArrayList<Kutya> kutyaLista) {
+        kutyaListaRendez(kutyaLista);
+        return nevSzerintValaszt(kutyaLista);
+    }
+
+    private static Kutya nevSzerintValaszt(ArrayList<Kutya> kutyaLista) {
+        Kutya legkisebb = kutyaLista.get(0);
+        int index = 1;
+        while (legkisebb.eletkor()==kutyaLista.get(index).eletkor()){
+            Kutya masik = kutyaLista.get(index);
+            if (legkisebb.nev.compareTo(masik.nev)<0) {
+                legkisebb = masik;
+            }
+            index++;
+        }
+        return legkisebb;
+    }
+
+    private static void kutyaListaRendez(ArrayList<Kutya> kutyaLista) {
+        Kutya cserehely;
+        for (int i = 0; i < kutyaLista.size()-1; i++) {
+            for (int j = i++; j < kutyaLista.size(); j++) {
+                if (kutyaLista.get(i).eletkor()> kutyaLista.get(j).eletkor()){
+                    cserehely = kutyaLista.get(i);
+                    kutyaLista.set(i, kutyaLista.get(j));
+                    kutyaLista.set(j, cserehely);
+                }
+            }
+        }
+    }
+
+    private static ArrayList<Kutya> kutyaGyar(String eleresiUtvonal) {
+        ArrayList<String[]> kutyaAdatokLista = FileController.fajlOlvas(eleresiUtvonal);
+        return kutyaListaGyart(kutyaAdatokLista);
+    }
+
+    private static ArrayList<Kutya> kutyaListaGyart(ArrayList<String[]> kutyaAdatokLista) {
+        Random veletlenGenerator = new Random();
+        ArrayList<Kutya> eredmenyLista = new ArrayList<>();
+        while (kutyaAdatokLista.size()>0) {
+            int index = veletlenGenerator.nextInt(kutyaAdatokLista.size());
+            Kutya temp = kutyaKeszito(kutyaAdatokLista.get(index));
+            eredmenyLista.add(temp);
+            kutyaAdatokLista.remove(index);
+        }
+        return eredmenyLista;
+    }
+
+    private static Kutya kutyaKeszito(String[] kutyaAdatok) {
+        Kutya eredmenyKutya = new Kutya();
+        eredmenyKutya.nev = kutyaAdatok[0];
+        eredmenyKutya.szulEv = Integer.parseInt(kutyaAdatok[1]);
+        return eredmenyKutya;
     }
 }

@@ -1,0 +1,10 @@
+Bruno;2018
+Pluto;2015
+Tango;2009
+Shakira;2010
+Chili;2011
+Csoki;2017
+Bodri;2008
+Bodza;2004
+Morcos;2019
+Zsemle;2013
