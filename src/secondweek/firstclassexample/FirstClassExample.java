@@ -28,6 +28,7 @@ public class FirstClassExample {
         kutyaPeldany2.alfaj="Angol";
         System.out.println(kutyaPeldany2.fajtaTeljes());
         ArrayList<String[]> kutyaAdatokLista= FileController.fajlOlvas("kutyak.txt");
+        System.out.println(kutyaAdatokLista);
 
 
 
