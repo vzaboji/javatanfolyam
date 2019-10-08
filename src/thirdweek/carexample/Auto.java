@@ -1,4 +1,4 @@
-package thirdweek;
+package thirdweek.carexample;
 
 import java.util.Random;
 
@@ -34,5 +34,6 @@ public class Auto {
     public static void osztalySzintuUtkozes(Auto a, Auto b){
         //peldany szintu metodus hivas peldanyon keresztul
         a.utkozes(b);
+
     }
 }

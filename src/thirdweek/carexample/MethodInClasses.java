@@ -1,4 +1,4 @@
-package thirdweek;
+package thirdweek.carexample;
 
 public class MethodInClasses {
 
