@@ -33,4 +33,12 @@ public class Allat {
 	public String toString() {
 		return jel;
 	}
+
+	public Object getPozicio() {
+
+	}
+
+	public String getJel() {
+		return jel;
+	}
 }
