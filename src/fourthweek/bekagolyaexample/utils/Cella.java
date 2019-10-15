@@ -1,6 +1,5 @@
 package fourthweek.bekagolyaexample.utils;
 
-import allatok.Allat;
 import fourthweek.bekagolyaexample.allatok.Allat;
 
 public class Cella {
@@ -9,10 +8,18 @@ public class Cella {
 	private Pozicio pozicio;
 
 	public Allat getAllat() {
-
+		return allat;
 	}
 
 	public Pozicio getPozicio() {
+		return pozicio;
+	}
 
+	public void setAllat(Allat allat) {
+		this.allat = allat;
+	}
+
+	void setPozicio(Pozicio pozicio) {
+		this.pozicio=pozicio;
 	}
 }
